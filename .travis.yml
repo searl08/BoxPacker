@@ -2,24 +2,11 @@ language: php
 
 env:
   - TEST_SUITE=unit
-  - TEST_SUITE=functional
-  - TEST_SUITE=efficiency
 php:
   - 7.4
   - 7.3
   - 7.2
   - 7.1
-
-matrix:
-  include:
-    - php: nightly
-      env: FORCE_LATEST=1
-    - php: 7.1
-      env: PREFER_LOWEST=1
-    - php: 7.2
-      env: CSFIXER=1
-  allow_failures:
-    - php: nightly
 
 cache:
   directories:
